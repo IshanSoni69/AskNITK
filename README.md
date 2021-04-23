@@ -1,5 +1,5 @@
-# AskNITK
-This is a Quora like forum built upon MERN Stack 
+# Quora-Clone
+This is a Quora clone built of MERN Stack 
 
 ## Desired Features:
 
@@ -14,3 +14,6 @@ This is a Quora like forum built upon MERN Stack
 
 - [ ] User gets notified when his/her question is answered
 - [ ] Making web app realtime
+
+## Current Features:
+

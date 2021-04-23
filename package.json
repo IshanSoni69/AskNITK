@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "This is the backend to Quora Clone",
   "main": "server.js",
-  "repository": "https://github.com/Ntshembo-Hlongwane1/Quora-Clone.git",
   "author": "Ntshembo <juniorWebProjects@gmail.com>",
   "license": "MIT",
   "scripts": {
@@ -13,8 +12,14 @@
   "dependencies": {
     "@babel/core": "^7.12.9",
     "@babel/node": "^7.12.6",
+    "@babel/polyfill": "^7.12.1",
     "@babel/preset-env": "^7.12.7",
-    "bcrypt": "^5.0.0",
+    "@mapbox/node-pre-gyp": "^1.0.4",
+    "babel-plugin-polyfill-corejs2": "^0.2.0",
+    "babel-plugin-polyfill-corejs3": "^0.2.0",
+    "babel-plugin-polyfill-regenerator": "^0.2.0",
+    "bcrypt": "^5.0.1",
+    "cjs": "^0.0.11",
     "cloudinary": "^1.23.0",
     "connect-mongodb-session": "^2.4.1",
     "cors": "^2.8.5",
@@ -22,9 +27,13 @@
     "express": "^4.17.1",
     "express-session": "^1.17.1",
     "formidable": "^1.2.2",
-    "mongoose": "^5.10.16"
+    "mongoose": "^5.10.16",
+    "node-pre-gyp": "^0.15.0",
+    "optional-require": "^1.0.3",
+    "pusher": "^4.0.2"
   },
   "devDependencies": {
+    "babel-polyfill": "^6.26.0",
     "nodemon": "^2.0.6"
   }
 }

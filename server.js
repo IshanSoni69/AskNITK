@@ -5,6 +5,7 @@ import dotenv from "dotenv";
 import expressSession from "express-session";
 import MongoStore from "connect-mongodb-session";
 import AuthRoute from "./Routes/AuthRoute/AuthRoute";
+import QuestionRoute from "./Routes/QuestionRoute/Question";
 dotenv.config();
 
 const app = express();
@@ -35,7 +36,7 @@ app.use(
     cookie: {
       httpOnly: true,
       secure: process.env.NODE_ENV === "production",
-      maxAge: 10 * 60 * 60 * 24 * 1000,
+      maxAge: 10 * 60 * 60 * 24 * 1000* 100,
       sameSite: false,
     },
   })
@@ -46,7 +47,9 @@ const mongoDB_connectionOptions = {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useCreateIndex: true,
+  useFindAndModify: false,
 };
+
 mongoose.connect(mongoURI, mongoDB_connectionOptions, (error) => {
   if (error) {
     return console.error(error);
@@ -57,6 +60,7 @@ mongoose.connect(mongoURI, mongoDB_connectionOptions, (error) => {
 
 //=========================================================Server EndPoints=============================================
 app.use(AuthRoute);
+app.use(QuestionRoute);
 
 //=========================================================Server Connection & Configs==================================
 const PORT = process.env.PORT || 5000;
